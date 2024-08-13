@@ -1,0 +1,5 @@
+1. change the pom.xml file and add the dependencies
+2. change the application properties and check the data base
+   and port accNumber
+
+3.

@@ -1,0 +1,9 @@
+1.classe are the tempelate or blueprint from which object is created.
+2.object i real life entites that is create to use the method and arrtibutes of the
+  class.
+
+3.Access modifiers in Java are the keywords that are used for controlling the use 
+  of the methods, constructors, fields, and methods in a class.
+
+4.
+

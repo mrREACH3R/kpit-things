@@ -1,0 +1,254 @@
+
+ node -v : to check the node is installed in my computer
+ 
+ npm -v : to check npm is install or not.
+ 
+ Angular ---> It is javascript frame work . angular is typescript based frontend framework which is used to create front-end
+              of our applications.
+			  
+			  using angular we can make single page applications.
+			  
+ ---> to run springboot server we need TOMCAT
+ 
+ --->Angular application run on Node server
+ 
+ ---> REST API : is used to communicate between backend and frontend
+ 
+ ---> data is in the format of Json from backend 
+ 
+ --->npm  INIT : will create a simple js project and u will see package .jason file 
+ 
+ ---->package. jason file help you to store the detail about the package including dependency and the script.
+ 
+ ---->first way to excute javascript file is : node <Filename>
+ 
+ ----> script like start is inbuilt start :
+ 
+ ---> if we deciding to custom script then we have to write : npm run <name of script>
+ 
+ ----------------  How to install the package 
+ 
+   if i want to install i have to write npm i <package name> that will intall locally if we intall it globally the we have to write
+     npm i <packagename> -g
+	 
+	  npm list -g @angular/cli
+	  NPM STATER>set path=%path%;C:\Users\shubhamk21\AppData\Roaming\npm
+	  
+	  ng new 02-angular-stater --standalone=false
+	  
+  --node_modules store actual dependency requred for my project
+	 
+	 
+  --ng serve :will help us to deploy in node server
+  
+  --angular component is main building block of angular projct which will get us to get angular ui.
+  
+  --create components: ng generate component <name of component>
+                     or ng g c <name of component> 
+      in specific module:	ng g c student/list-students				 
+					 
+  --whenever we create component they will create automatically four components welcome.components.ts,welcome.components.html,
+    welcome.components.css  welcome.components.spec.ts
+   
+  --Data Binding in angular--- share the data between typescript class to its associative components and vice versa.
+   
+  --One way data Binding--- when our data is moving from tyscript to html or html to type script in one direction.
+  
+  
+  --   ng server-->[angular.jason]---entry point------->[index.html]---<app root>------->[main.ts]--bootstrap module----->[appModule]--->
+                                                       /
+			                                          /
+			                                         /
+			     -------->[app component]----->[app component.html]----output of app component.html file will be include inside 
+			                                                               index.html
+  
+  
+  --style url: by the help of this we can add additional css file .
+  
+  --if we want to multi line string in the javascript and typescript then we use : `` 
+   
+  --to handle a event we have to we put it into () like (click).
+  
+  --[] it is used for the property binding.
+  
+  --to acchive two way data binding we use banana box . like [()]
+  
+  -- ng module is directives which present in form modules.
+  
+  -- mkdir 05-typescript-starter 
+      npm init --yes
+	  
+	  
+  --Typescript is superset of javascript. all the features of javascript is supported bt the typescript along with that some additional
+  
+  --javascript is dynamically type language and typescript is static type language
+  
+  --for creating module : ng genarate module <moduleName>
+  
+  --ng module is decorator we wiil apply on the top the class to make this class as a module.
+  
+  --[] it used to create array
+  
+  -- ng module contain first artibute decleration here we decalare custom nd normal pipes,imports , third  providers which help us to
+     provides services
+ 
+  --there are three types of directives present in angular 1. component 2.Artibute 3.Structural directives
+  
+  --directives is a class which can modfify exixting component or file
+  
+  --if we pass data between from parent component to child component then @Input decorator help us
+
+  --syntax of declaring array let <arrayName>:datatype[]=[1,2,3,5]; for string array : let arr:string[]=["shubham","amit","sumit"];
+  
+  --create a function to add two number ;
+Typescript--->
+  function add(n1:number,n2:number):number{
+  return n1+n2;
+  }
+  
+  javascript------>
+ function add(n1,n2){
+  return n1+n2;
+  }
+  
+  -- class news{
+   var1:number=100;
+   var2:string="shubham";
+   
+   display():any{
+   console.log(this.v1);
+   console.log(this.v2);
+  
+  }
+  
+  let obj:news=new news();
+  obj.display();
+  
+  
+  --create a class factorial ,int that class declere a property number insiliaze that property using paramaterised constructor,create
+    fact method to calculate factorial
+	
+	class Factorial{
+  var1:number;
+  
+  constructor(var1:number){
+    this.var1=5;
+  }
+  
+  fact():any{
+    let ans=1;
+    for(let i=2;i<=this.var1;i++){
+       ans=ans*i;
+      
+      console.log(ans);
+    }
+    
+  }
+  
+}
+
+let obj:Factorial=new Factorial(5);
+obj.fact();
+	
+  -- module is also basic building block of angular project which can hold the component and custom pipe and along with that it hold 
+     some services.
+	 
+  --Angular service is single-ton-object , normally we can keep our data is service and that data is shared by multiple component.
+  
+  --Angular pipe will allow you to display the data in custom format
+  
+  --@pipe is special decorator of typescript class and typescript class  implement pipe interface and must have transform function
+  
+  --create any siple custom pipe
+  
+  --spec.ts--unique test case
+  
+  --@component decorator ---to specify 
+  
+  --npm i : install the package
+  
+  --whenever we want to use component we use selector
+  
+  --pipe: 
+  
+  --directives: is class which make small change in the component files
+    example of attributive directiVE  ngModel,ngClass,ngStyle
+	structural directive: *ngFor,*ngIf
+
+
+--_-------Angular lifecycle hook-----
+	
+-- ng onInit: is a life cycle which present on onInit interface 
+
+--ng onDestroy: present on onDestroy interface
+
+--ng onChanges: present on a onChanges interfaces
+
+-- constructor and ng OnInit they will call only once during the entire lifecycle of the component
+
+-- ng OnInit will create only once during entire life cycle
+
+-- ng onChange call every time when we making a change inside the component.
+
+ --------------------------------------------Form-----------------------------------------------------------------------------
+
+ 
+--two ways of hanlde the form in angular : tempelate driven form , reactive form 
+                                                |                          |
+                                            most of the logic in          most of logic in typescript
+											     |                           (reactive forms module)
+											html(FormsModule)
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+ --- ngClass : by using this we can apply any class dynamically on any particular value
+ --- ngStyle : by help we can aplly particular css property for the pitch
+ 
+ ---------------------------------------code Marathon format----------------------------------------------------------------------------
+ 
+ 
+ --typescript : facrtroial,multiplication,prime no, sum of digit of number,fibbanoci series;
+ 
+ --component with 
+ 
+ --form along with data binding
+ 
+ --datasharing between child and parent
+ 
+ --Http: /
+ 
+ 
+ 
+ 
+ ----------------------------------------------------------------------------------------------------------------------------------------
+ 
+ 
+ 
+ 
+ 
+ -- http get help you get all the data from backend server through the rest Api and the return type this get is observable.
+ 
+ -- single page application is web application that intrect with the user by dynamically rewriting the current web page with the
+    new data without reloading the whole page. 
+ --
+ --
+ --
+ --
+ --
+ --
+ --
+ --
+ --
+ --
+ --
+ --
+ --
+ --
+ --
+ --
+ --
+ --
+ --
+ --
+ 
+ 
